@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Hiirad is a UK-based enterprise connecting commerce, logistics, technology and international opportunities.">
+  <meta name="theme-color" content="#075b35">
+  <title>Hiirad | Enterprise Without Borders</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23075b35'/%3E%3Cpath d='M17 15h9v13h12V15h9v34h-9V36H26v13h-9z' fill='%23f6c900'/%3E%3C/svg%3E">
+  <style>
+    :root{--green:#075b35;--green-2:#0a7445;--lime:#d7ee48;--yellow:#f6c900;--ink:#101712;--muted:#536158;--cream:#f7f8ef;--white:#fff;--line:#dce3d7;--shadow:0 20px 60px rgba(7,91,53,.13)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--cream);line-height:1.6}a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+    .topbar{background:#0d1510;color:#e8f1eb;font-size:.82rem}.topbar .wrap{display:flex;justify-content:space-between;gap:20px;padding:8px 0}.topbar a{color:var(--lime)}
+    header{position:sticky;top:0;z-index:20;background:rgba(247,248,239,.94);backdrop-filter:blur(16px);border-bottom:1px solid rgba(7,91,53,.1)}nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;font-weight:900;font-size:1.45rem;letter-spacing:-.04em}.mark{width:42px;height:42px;border-radius:13px;background:var(--green);color:var(--yellow);display:grid;place-items:center;font-size:1.35rem;box-shadow:0 7px 18px rgba(7,91,53,.18)}.navlinks{display:flex;align-items:center;gap:25px;font-weight:700;font-size:.92rem}.navlinks a:hover{color:var(--green)}.menu{display:none;border:0;background:var(--green);color:white;border-radius:10px;width:44px;height:44px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 20px;border-radius:999px;font-weight:800;border:1px solid transparent;transition:.2s}.btn.primary{background:var(--yellow);color:#1a1b11;box-shadow:0 10px 26px rgba(246,201,0,.22)}.btn.primary:hover{transform:translateY(-2px)}.btn.outline{border-color:rgba(255,255,255,.5);color:white}.btn.outline:hover{background:white;color:var(--green)}
+    .hero{overflow:hidden;background:var(--green);color:white;position:relative}.hero:before{content:"";position:absolute;inset:-50% -20% auto 45%;height:760px;background:radial-gradient(circle,rgba(215,238,72,.2),transparent 63%);pointer-events:none}.hero-grid{min-height:650px;display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:70px;padding:86px 0}.eyebrow{display:inline-flex;align-items:center;gap:9px;text-transform:uppercase;letter-spacing:.16em;font-size:.74rem;font-weight:900;color:var(--lime)}.eyebrow:before{content:"";width:26px;height:3px;background:var(--yellow)}h1{font-size:clamp(3rem,6.8vw,6.3rem);line-height:.91;letter-spacing:-.068em;margin:20px 0 27px;max-width:760px}.hero p{font-size:1.12rem;color:#d8e7df;max-width:620px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}.hero-card{position:relative;background:#fff;color:var(--ink);border-radius:30px;padding:33px;box-shadow:0 30px 80px rgba(0,0,0,.25);transform:rotate(1.5deg)}.hero-card:after{content:"";position:absolute;width:120px;height:120px;background:var(--yellow);border-radius:28px;right:-27px;bottom:-27px;z-index:-1}.hero-card small{text-transform:uppercase;letter-spacing:.12em;font-weight:900;color:var(--green)}.hero-card h2{font-size:2rem;line-height:1.1;margin:12px 0 23px}.metric{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.metric div{background:#f0f4eb;border-radius:18px;padding:19px}.metric strong{display:block;color:var(--green);font-size:1.45rem}.metric span{font-size:.84rem;color:var(--muted)}
+    section{padding:96px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:42px}.section-head h2{font-size:clamp(2.2rem,4vw,3.8rem);line-height:1;letter-spacing:-.055em;margin:13px 0 0}.section-head p{max-width:520px;color:var(--muted);margin:0}
+    .divisions{background:#fff}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.division{min-height:270px;padding:28px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,#fff,#f5f7ef);display:flex;flex-direction:column;justify-content:space-between;transition:.25s}.division:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:#a9c7b2}.icon{width:49px;height:49px;border-radius:14px;background:var(--green);color:var(--yellow);display:grid;place-items:center;font-size:1.3rem}.division h3{font-size:1.35rem;margin:26px 0 8px}.division p{color:var(--muted);margin:0}.arrow{color:var(--green);font-weight:900;margin-top:24px}
+    .about-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:70px;align-items:center}.story{background:#0d1510;color:white;padding:48px;border-radius:30px;position:relative;overflow:hidden}.story:after{content:"H";font-size:18rem;font-weight:1000;position:absolute;right:-10px;bottom:-135px;color:rgba(246,201,0,.08);line-height:1}.story h2{font-size:clamp(2.5rem,4vw,4.6rem);line-height:.96;letter-spacing:-.06em;margin:18px 0 25px}.story p{color:#c8d1cb}.values{display:grid;gap:12px}.value{display:flex;gap:18px;padding:20px;border-bottom:1px solid var(--line)}.number{color:var(--green);font-weight:900;font-size:.8rem}.value h3{margin:0 0 5px}.value p{margin:0;color:var(--muted)}
+    .projects{background:#e9efdf}.project-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:18px}.project{border-radius:26px;padding:34px;min-height:300px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}.project:first-child{background:var(--green);color:white}.project:nth-child(2){background:var(--yellow)}.project:nth-child(3){background:#121a14;color:white}.project:nth-child(4){background:white}.project h3{font-size:1.7rem;margin:8px 0}.project p{max-width:540px;margin:0;opacity:.8}.project .tag{font-size:.73rem;text-transform:uppercase;letter-spacing:.14em;font-weight:900}
+    .contact{background:var(--green);color:white}.contact-card{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}.contact h2{font-size:clamp(2.5rem,5vw,5.2rem);line-height:.94;letter-spacing:-.06em;margin:15px 0 20px}.contact p{color:#d5e4dc}.details{background:white;color:var(--ink);border-radius:28px;padding:32px;display:grid;gap:18px}.detail{padding-bottom:16px;border-bottom:1px solid var(--line)}.detail:last-child{border:0;padding:0}.detail small{display:block;color:var(--green);font-weight:900;text-transform:uppercase;letter-spacing:.1em;margin-bottom:3px}.detail a:hover{color:var(--green)}
+    footer{background:#0d1510;color:#b8c2bc;padding:35px 0}.foot{display:flex;justify-content:space-between;gap:25px;align-items:center}.foot strong{color:white}.footlinks{display:flex;gap:20px}
+    @media(max-width:900px){.hero-grid,.about-grid,.contact-card{grid-template-columns:1fr}.hero-grid{padding:65px 0 85px}.hero-card{transform:none;max-width:560px}.grid{grid-template-columns:repeat(2,1fr)}.project-grid{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:20px}.navlinks{display:none;position:absolute;top:78px;left:20px;right:20px;background:white;border-radius:18px;padding:18px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch}.navlinks.open{display:flex}.menu{display:block}}
+    @media(max-width:590px){.wrap{width:min(100% - 28px,1160px)}.topbar .wrap{justify-content:center}.topbar span:last-child{display:none}h1{font-size:3.55rem}.hero-grid{min-height:auto;gap:48px}.hero-card{padding:24px}.metric,.grid{grid-template-columns:1fr}section{padding:72px 0}.story{padding:32px}.foot{align-items:flex-start;flex-direction:column}.footlinks{flex-wrap:wrap}.nav-cta{display:none}}
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="wrap"><span>Hiirad Ltd · London, United Kingdom</span><span>International enterprise &amp; business development</span></div></div>
+  <header>
+    <nav class="wrap" aria-label="Main navigation">
+      <a class="brand" href="#home"><span class="mark">H</span> HIIRAD</a>
+      <button class="menu" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <div class="navlinks">
+        <a href="#about">About</a><a href="#divisions">Divisions</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+      </div>
+      <a class="btn primary nav-cta" href="#contact">Work with Hiirad</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">Built in Britain · Connected globally</span>
+          <h1>Enterprise without borders.</h1>
+          <p>Hiirad brings together commerce, logistics, technology and international partnerships to build practical opportunities across the UK, Africa and global markets.</p>
+          <div class="actions"><a class="btn primary" href="#divisions">Explore our work →</a><a class="btn outline" href="#contact">Contact Hiirad</a></div>
+        </div>
+        <aside class="hero-card" aria-label="Hiirad overview">
+          <small>One group. Multiple opportunities.</small>
+          <h2>Connecting markets, people and ambitious ideas.</h2>
+          <div class="metric">
+            <div><strong>UK</strong><span>Headquartered in London</span></div>
+            <div><strong>Global</strong><span>International outlook</span></div>
+            <div><strong>B2B</strong><span>Wholesale partnerships</span></div>
+            <div><strong>B2C</strong><span>Retail experiences</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+    <section class="divisions" id="divisions">
+      <div class="wrap">
+        <div class="section-head"><div><span class="eyebrow">Our divisions</span><h2>One vision.<br>Many industries.</h2></div><p>Our businesses are shaped around real needs: moving goods, opening markets, building digital commerce and developing long-term partnerships.</p></div>
+        <div class="grid">
+          <article class="division"><div><div class="icon">◈</div><h3>Hiirad Enterprise</h3><p>Wholesale and retail initiatives connecting suppliers, businesses and customers across multiple markets.</p></div><span class="arrow">Commerce →</span></article>
+          <article class="division"><div><div class="icon">↗</div><h3>Hiirad Logistics</h3><p>International trade and logistics support spanning the UK, Europe, Asia, Africa and North America.</p></div><span class="arrow">Global movement →</span></article>
+          <article class="division"><div><div class="icon">◎</div><h3>Digital Commerce</h3><p>Technology-led retail, marketplace development and digital tools that help businesses reach wider audiences.</p></div><span class="arrow">Digital growth →</span></article>
+          <article class="division"><div><div class="icon">◇</div><h3>Hiirad Fishing</h3><p>Responsible seafood and fishing ventures focused on quality, opportunity and sustainable development.</p></div><span class="arrow">Marine enterprise →</span></article>
+          <article class="division"><div><div class="icon">◆</div><h3>Resources</h3><p>Exploration of responsible natural-resource opportunities, including gold mining and refinery partnerships.</p></div><span class="arrow">Development →</span></article>
+          <article class="division"><div><div class="icon">H</div><h3>Franchises</h3><p>Scalable business concepts and partnerships designed to create local ownership and lasting economic value.</p></div><span class="arrow">Partnerships →</span></article>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="wrap about-grid">
+        <div class="story"><span class="eyebrow">About Hiirad</span><h2>Ambition grounded in purpose.</h2><p>Hiirad Ltd is a UK-based enterprise with an international outlook. We develop commercial ideas, connect partners and create routes between emerging opportunities and established markets.</p><p>Our approach is practical: understand the need, build the right relationship and deliver value that can grow.</p></div>
+        <div class="values">
+          <div class="value"><span class="number">01</span><div><h3>Trust first</h3><p>We build transparent, dependable partnerships designed for the long term.</p></div></div>
+          <div class="value"><span class="number">02</span><div><h3>Global perspective</h3><p>We connect local knowledge with international networks and market access.</p></div></div>
+          <div class="value"><span class="number">03</span><div><h3>Practical innovation</h3><p>We use technology and new business models where they create real value.</p></div></div>
+          <div class="value"><span class="number">04</span><div><h3>Shared opportunity</h3><p>We seek growth that benefits customers, partners and communities.</p></div></div>
+        </div>
+      </div>
+    </section>
+    <section class="projects" id="projects">
+      <div class="wrap">
+        <div class="section-head"><div><span class="eyebrow">What we build</span><h2>Ideas moving<br>into action.</h2></div><p>Hiirad develops connected ventures across commerce, supply chains, community opportunity and international business.</p></div>
+        <div class="project-grid">
+          <article class="project"><span class="tag">Digital retail</span><h3>Multi-market commerce</h3><p>Creating connected shopping experiences for customers in the UK and international markets.</p></article>
+          <article class="project"><span class="tag">Trade</span><h3>Supplier networks</h3><p>Opening routes between quality suppliers and growing markets.</p></article>
+          <article class="project"><span class="tag">Logistics</span><h3>International reach</h3><p>Supporting commercial movement across continents.</p></article>
+          <article class="project"><span class="tag">Partnership</span><h3>New ventures</h3><p>Turning promising ideas into structured, scalable businesses.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <div class="wrap contact-card">
+        <div><span class="eyebrow">Start a conversation</span><h2>Let’s build something valuable.</h2><p>For business partnerships, supply opportunities, investment discussions or general enquiries, contact Hiirad in London.</p><a class="btn primary" href="mailto:info@hiirad.net">Email Hiirad →</a></div>
+        <div class="details">
+          <div class="detail"><small>Email</small><a href="mailto:info@hiirad.net">info@hiirad.net</a></div>
+          <div class="detail"><small>Telephone</small><a href="tel:+447447794712">+44 7447 794712</a></div>
+          <div class="detail"><small>Location</small><span>London, United Kingdom</span></div>
+          <div class="detail"><small>Website</small><span>www.hiirad.com</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap foot"><div><strong>HIIRAD</strong><br><span>Enterprise without borders.</span></div><div class="footlinks"><a href="#about">About</a><a href="#divisions">Divisions</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div><span>© <span id="year"></span> Hiirad Ltd</span></div></footer>
+  <script>
+    const menu=document.querySelector('.menu'),links=document.querySelector('.navlinks');
+    menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',open);});
+    links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false')}));
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
