@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" role="img" aria-labelledby="title desc">
+  <title id="title">Hiirad logo</title>
+  <desc id="desc">A circular green and gold Hiirad brand mark with the Hiirad wordmark.</desc>
+  <defs>
+    <linearGradient id="ringGreen" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#16a55c"/>
+      <stop offset="100%" stop-color="#0e7a46"/>
+    </linearGradient>
+    <linearGradient id="ringGold" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffd64d"/>
+      <stop offset="100%" stop-color="#f5bb00"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="400" fill="none"/>
+
+  <g transform="translate(160 0)">
+    <circle cx="440" cy="200" r="172" fill="none" stroke="url(#ringGreen)" stroke-width="34"/>
+    <circle cx="440" cy="200" r="150" fill="none" stroke="url(#ringGold)" stroke-width="28"/>
+
+    <path d="M225 166 C270 82, 370 50, 440 50 C520 50, 615 82, 663 166" fill="none" stroke="url(#ringGreen)" stroke-width="30" stroke-linecap="round"/>
+    <path d="M276 274 C322 326, 380 350, 440 350 C500 350, 562 326, 607 274" fill="none" stroke="url(#ringGreen)" stroke-width="30" stroke-linecap="round"/>
+
+    <g transform="translate(440 200)">
+      <path d="M0,-72 L16,-34 L58,-28 L25,1 L38,42 L0,19 L-38,42 L-25,1 L-58,-28 L-16,-34 Z" fill="url(#ringGold)" stroke="#f3d14a" stroke-width="4"/>
+    </g>
+
+    <g transform="translate(440 220)">
+      <text x="0" y="0" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-weight="700" font-size="124" fill="#0d7d47" letter-spacing="-6">hiirad</text>
+      <text x="0" y="90" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="2" fill="#0d7d47">www.hiirad.com</text>
+    </g>
+  </g>
+</svg>
