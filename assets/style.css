@@ -12,6 +12,6 @@
 #division-04{--division-image:url('/assets/division-fishing.jpg')}
 #division-05{--division-image:url('/assets/division-resources.jpg')}
 #division-06{--division-image:url('/assets/division-partnerships.jpg')}
-.division-card .card-top,.division-card .card-link{color:var(--gold)}
+.division-card .card-top,.division-card .card-link{color:#ffe08a}
 .division-card h3,.division-card p{color:#fff}
 .division-card:hover,.division-card:focus-visible{border-color:var(--gold);box-shadow:0 10px 30px #042f2526}
