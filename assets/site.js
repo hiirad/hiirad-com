@@ -23,9 +23,9 @@ document.addEventListener('click', event => {
 });
 window.matchMedia('(min-width: 861px)').addEventListener('change', closeMenu);
 document.querySelectorAll('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });
-const oldRoutes = {about:'about.html',divisions:'divisions.html',projects:'projects.html',contact:'contact.html'};
+const oldRoutes = {about:'/about/',divisions:'/divisions/',projects:'/projects/',contact:'/contact/'};
 if ((location.pathname === '/' || location.pathname.endsWith('/index.html')) && oldRoutes[location.hash.slice(1)]) {
-  location.replace(oldRoutes[location.hash.slice(1)]);
+  location.replace(oldRoutes[location.hash.slice(1)] + location.search);
 }
 
 const carousel = document.querySelector('.hero-carousel');

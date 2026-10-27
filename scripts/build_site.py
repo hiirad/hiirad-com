@@ -3,6 +3,7 @@ from pathlib import Path
 from html import escape
 from urllib.parse import quote
 import json
+import re
 
 ROOT = Path(__file__).resolve().parents[1]
 NAV = [('index.html','Home'),('about.html','Who we are'),('divisions.html','Our divisions'),('projects.html','Projects'),('contact.html','Contact')]
@@ -87,4 +88,39 @@ files=['index.html','about.html','divisions.html','projects.html','contact.html'
 (ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>https://hiirad.com/'+('' if f=='index.html' else f)+'</loc></url>' for f in files)+'</urlset>\n')
 error_page = ROOT / '404.html'
 error_page.write_text(error_page.read_text().replace('<head>', '<head><base href="/">', 1))
-print(f'Generated {len(files)+1} pages and sitemap.')
+
+def clean_url(file):
+ return '/' if file == 'index.html' else '/' + Path(file).stem + '/'
+
+# Directory index pages work on GitHub Pages without server rewrite rules.
+for file in files + ['404.html']:
+ path = ROOT / file
+ html = path.read_text()
+ html = re.sub(r'href="([a-z-]+|index)\.html([?#][^\"]*)?"',
+               lambda match: 'href="' + clean_url(match[1] + '.html') + (match[2] or '') + '"', html)
+ html = html.replace('="assets/', '="/assets/')
+ if file == '404.html':
+  html = re.sub(r'<link rel="canonical"[^>]+>', '<meta name="robots" content="noindex">', html)
+  path.write_text(html)
+  continue
+ url = clean_url(file)
+ html = re.sub(r'<link rel="canonical"[^>]+>',
+               '<link rel="canonical" href="https://hiirad.com' + url + '">', html)
+ # Keep query strings and anchors when opening an old .html bookmark.
+ redirect = '<script>if (location.pathname.endsWith("/index.html")) location.replace(' + json.dumps(url) + ' + location.search + location.hash);</script>'
+ html = html.replace('<head>', '<head>' + redirect, 1)
+ if file == 'index.html':
+  path.write_text(html)
+ else:
+  destination = ROOT / Path(file).stem / 'index.html'
+  destination.parent.mkdir(parents=True, exist_ok=True)
+  destination.write_text(html)
+  path.write_text('<!doctype html><html lang="en"><head><meta charset="utf-8">'
+                  '<title>Redirecting | Hiirad</title><link rel="canonical" href="https://hiirad.com' + url + '">'
+                  '<script>location.replace(' + json.dumps(url) + ' + location.search + location.hash);</script>'
+                  '<meta http-equiv="refresh" content="0;url=' + url + '"></head>'
+                  '<body><p>This page has moved to <a href="' + url + '">' + url + '</a>.</p></body></html>')
+
+(ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join('<url><loc>https://hiirad.com' + clean_url(file) + '</loc></url>' for file in files) + '</urlset>\n')
+print(f'Generated {len(files)} clean page URLs, legacy redirects, a 404 page and sitemap.')
+

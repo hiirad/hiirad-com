@@ -14,6 +14,10 @@ Static, responsive company website for https://hiirad.com, with green and gold b
 
 Home, About, Divisions, Enterprise, Logistics, Digital Commerce, Fishing, Resources, Franchises & Partnerships, Projects, Contact, Website Privacy, and a 404 page.
 
+## Clean page URLs
+
+Public pages use directory URLs such as `/about/` and `/contact/`. Internal links, canonical tags and the sitemap use these URLs. The build generates each directory's `index.html` with root-relative assets. Legacy `.html` pages redirect with JavaScript (preserving query strings and anchors) and a meta-refresh fallback. The homepage normalizes `/index.html` to `/` with JavaScript. GitHub Pages does not support custom HTTP 301 rules.
+
 ## Quote enquiries
 
 The form validates required fields, builds a preview using textContent, and creates an encoded email draft addressed to info@hiirad.net. Visitors must send the draft themselves. Copying the enquiry and the existing Enterprise online contact form are alternatives. There is no custom server, form database, payment collection, analytics or application storage. No visitor enquiry is sent while reviewing the form.
