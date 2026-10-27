@@ -42,6 +42,15 @@ Illustrative business and industry photography, not representations of Hiirad-ow
 - `city.jpg`: https://images.unsplash.com/photo-1486406146926-c627a92ad1ab
 - `office.jpg`: https://images.unsplash.com/photo-1497366216548-37526070297c
 
+The six division cards use locally hosted illustrative backgrounds, with a dark green overlay for readable text:
+
+- `division-enterprise.jpg`: https://images.unsplash.com/photo-1441986300917-64674bd600d8
+- `division-logistics.jpg`: https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d
+- `division-digital-commerce.jpg`: https://images.unsplash.com/photo-1516321318423-f06f85e504b3
+- `division-fishing.jpg`: https://images.unsplash.com/photo-1510130387422-82bed34b37e9
+- `division-resources.jpg`: https://images.unsplash.com/photo-1441974231531-c6227db76b6e
+- `division-partnerships.jpg`: https://images.unsplash.com/photo-1521737711867-e3b97375f902
+
 The logo is retained unchanged from the original repository. Reference screenshots guided the layout; no Yenisom branding, claims or product images were reused.
 
 ## Accessibility
