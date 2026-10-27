@@ -85,7 +85,7 @@ if (form) {
     }
     enquiry = `Hiirad quote enquiry\n\nTopic: ${value('topic')}\nName: ${value('name')}\nEmail: ${value('email')}\nCompany: ${value('company') || 'Not specified'}\nPhone: ${value('phone') || 'Not specified'}\nCountry / destination: ${value('country')}\nPreferred timescale: ${value('timescale') || 'Not specified'}\n\nRequirements:\n${value('message')}`;
     preview.textContent = enquiry;
-    document.querySelector('#send-email').href = 'mailto:info@hiirad.net?subject=' + encodeURIComponent('Hiirad quote: ' + value('topic')) + '&body=' + encodeURIComponent(enquiry);
+    document.querySelector('#send-email').href = 'mailto:info@hiirad.com?subject=' + encodeURIComponent('Hiirad quote: ' + value('topic')) + '&body=' + encodeURIComponent(enquiry);
     review.hidden = false;
     status.textContent = 'Review your enquiry below. It has not been sent.';
     review.focus();

@@ -20,7 +20,7 @@ Public pages use directory URLs such as `/about/` and `/contact/`. Internal link
 
 ## Quote enquiries
 
-The form validates required fields, builds a preview using textContent, and creates an encoded email draft addressed to info@hiirad.net. Visitors must send the draft themselves. Copying the enquiry and the existing Enterprise online contact form are alternatives. There is no custom server, form database, payment collection, analytics or application storage. No visitor enquiry is sent while reviewing the form.
+The form validates required fields, builds a preview using textContent, and creates an encoded email draft addressed to info@hiirad.com. Visitors must send the draft themselves. Copying the enquiry and the existing Enterprise online contact form are alternatives. There is no custom server, form database, payment collection, analytics or application storage. No visitor enquiry is sent while reviewing the form.
 
 ## Content sources
 
